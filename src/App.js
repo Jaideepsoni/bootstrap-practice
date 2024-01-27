@@ -6,7 +6,7 @@ import Textform from './Components/Textform';
 function App() {
   return (<>
     <Navbar title="Jay's Portfolio" about="About"/>
-    <Textform LikhoKuch="How many times you clicked:"/>
+    <Textform LikhoKuch="Enter you text here:"/>
     </>
   );
 }
