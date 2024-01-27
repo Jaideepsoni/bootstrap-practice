@@ -23,10 +23,10 @@ export default function Textform(props) {
 
     return (    
         <>
-        <div className="mb-3 my-3 container " >
+        <div className="mb-3 my-3 container" >
             <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold">{props.LikhoKuch}</label>
 
-            <textarea className="form-control"  value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea className="form-control "  value={text} onChange={handleOnChange} style={{background: props.mode==="light"?'white':'#5C8374', color: props.mode==="light"?'black':'white'}} id="exampleFormControlTextarea1" rows="3"></textarea>
 
             <button type="button" className="btn btn-info my-3 mx-2" onClick={handleToUppercase}>Convert to Upper Case</button>
             <button type="button" className="btn btn-info my-3 mx-2" onClick={handleToLowercase}>Convert to Lower Case</button>

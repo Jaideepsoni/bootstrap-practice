@@ -2,21 +2,13 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
-    const [mode, setMode] = useState('light')
-    const toggleMode =()=> {
-          if(mode === 'light'){
-            setMode('dark')
-          }
-          else{
-            setMode('light')
-          }
-    }
+
   
     
 
     return (
 
-        <nav className="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme={`${mode === 'light'?'light':'dark'}`}>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme={`${props.mode === 'light'?'light':'dark'}`}>
             <div className="container-fluid" >
                 <a className="navbar-brand" href="/">{props.title}</a>
 
@@ -48,9 +40,9 @@ export default function Navbar(props) {
                             <a className="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    <div className={`form-check form-switch text-${mode === 'light'?'dark':'light'}`}>
-                        <input className="form-check-input" type="checkbox" role="switch" onClick={toggleMode} id="flexSwitchCheckDefault" />
-                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault" >{mode}</label>
+                    <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'}`}>
+                        <input className="form-check-input" type="checkbox" role="switch" onClick={props.toggleMode} id="flexSwitchCheckDefault" />
+                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault" >{props.mode}</label>
                     </div>
                 </div>
             </div>
